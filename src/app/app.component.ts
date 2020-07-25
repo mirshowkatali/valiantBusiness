@@ -26,6 +26,7 @@ import {Blogs} from './blogs';
   // Get blogs list
   getBlogs(): void {
     this.restApi.getBlogs().subscribe((resp: any) => {
+
       this.blogs = resp;
       });
   }
@@ -45,6 +46,12 @@ filterBlogs(filterValue: any) {
   }
 
   }
+
+
+
+
+
+
 }
 
 
