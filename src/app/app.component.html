@@ -1,35 +1,186 @@
-<div class="calculator">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-<input type="text" class="calculator-screen" [value]="currentNumber" disabled />
+<head>
+    <meta charset="utf-8" />
+    <title>Blogs</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <div class="calculator-keys">
+</head>
 
-    <button type="button" (click) = "getOperation('+')" class="operator" value="+">+</button>
-    <button type="button" (click) = "getOperation('-')" class="operator" value="-">-</button>
-    <button type="button" (click) = "getOperation('*')" class="operator" value="*">&times;</button>
-    <button type="button" (click) = "getOperation('/')" class="operator" value="/">&divide;</button>
-    
-    <button type="button" (click) = "getNumber('7')" value="7">7</button>
-    <button type="button" (click) = "getNumber('8')" value="8">8</button>
-    <button type="button" (click) = "getNumber('9')" value="9">9</button>
+<body>
 
 
-    <button type="button" (click) = "getNumber('4')" value="4">4</button>
-    <button type="button" (click) = "getNumber('5')" value="5">5</button>
-    <button type="button" (click) = "getNumber('6')" value="6">6</button>
+
+    <div class="search_bar">
 
 
-    <button type="button" (click) = "getNumber('1')" value="1">1</button>
-    <button type="button" (click) = "getNumber('2')" value="2">2</button>
-    <button type="button" (click) = "getNumber('3')" value="3">3</button>
+        <input type="text" class="form-control" placeholder="Search...">
 
 
-    <button type="button" (click) = "getNumber('0')" value="0">0</button>
-    <button type="button" (click) = "getDecimal()" class="decimal" value=".">.</button>
-    <button type="button" (click) = "clear()"  class="all-clear" value="all-clear">AC</button>
 
-    <button type="button" (click) = "getOperation('=')" class="equal-sign" value="=">=</button>
+    </div>
+    <div id="topright">
+
+        <div class="content">
+            <img class="topright" src="assets/img/user.jpg" alt="User picture">
+        </div>
+        <br>
+        <br>
+
+        <div class="screen">
+            John Doe
+        </div>
 
 
-  </div>
-</div>
+
+    </div>
+
+    <div id="main" style="margin-left:100px">
+        <h2>List of Blogs</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Post Title</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let blog of blogs">
+                    <td>{{blog.date}}</td>
+                    <td>{{blog.title}}</td>
+                    <td>{{blog.status}}</td>
+                    <td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <h2 class="txt">Trending Blogs</h2>
+    <a href="#" class="txt1">View All</a>
+    <div class="container1">
+
+
+
+        <div class="first">
+            <p><strong>Hi John Doe.</strong></p>
+            <strong class="fx">Welcome back John Doe.We are glad you are here.Inspire the best work
+              in people, enablig them to achieve thier goals.
+            </strong>
+            <br>
+            <br>
+            <a href="#" class="fx">View Details</a>
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="container">
+
+
+
+        <div class="first-box">
+            <p><strong>Prototyping</strong></p>
+            <strong class="fx">A prototype is an early sample,model or release of a product built to test...
+          </strong>
+        </div>
+
+        <div class="second-box">
+            <p><strong>Typography</strong></p>
+            <strong class="fx">In essence, topography is an art of arranging letters and text in a way...
+          </strong>
+        </div>
+
+        <div class="third-box">
+            <p><strong>Color Palette</strong></p>
+            <strong class="fx">The best way to use a scheme like this is to use one color as the primary...
+          </strong>
+        </div>
+
+    </div>
+    <div class="s-layout">
+        <!-- Sidebar -->
+        <div class="s-layout__sidebar">
+            <a class="s-sidebar__trigger" href="#0">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <nav class="s-sidebar__nav">
+                <ul>
+                    <li>
+                        <a class="s-sidebar__nav-link" href="#0">
+                            <i class="fa fa-home"></i><em>Home</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="s-sidebar__nav-link" href="#0">
+                            <i class="fa fa-user"></i><em>My Profile</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="s-sidebar__nav-link" href="#0">
+                            <i class="fa fa-camera"></i><em>Camera</em>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </div>
+
+    <div class="box">
+        <span class="box1">Articles Posted</span>
+        <br>
+        <p>80</p>
+    </div>
+    <div class="box2">
+        <span class="box1">Claps This Week</span>
+        <br>
+        <p>1.5K</p>
+    </div>
+    <div class="box3">
+        <span class="box1">New Followers This Week</span>
+        <br>
+        <p>972</p>
+    </div>
+    <div id="carousel">
+        <h2>Followers</h2>
+        <div class="right">
+            <a href="#" style="float: right;">View All</a>
+        </div>
+        <div class="slide">
+            <img src="assets/img/user.jpg" />
+        </div>
+        <div class="slide">
+            <img src="assets/img/user.jpg" />
+        </div>
+        <div class="slide">
+            <img src="assets/img/user.jpg" />
+        </div>
+
+    </div>
+    <div class="box4">
+        <span class="box1">Buy Pro Account to Explore Premium Features</span>
+        <br>
+        <br>
+        <br>
+        <p>Purchase Now</p>
+    </div>
+
+    <ul class="noti">
+        <li class="notification-container">
+            <i class="icon-globe"></i>
+            <span class="notification-counter">1</span>
+        </li>
+    </ul>
+
+</body>
+
+</html>
