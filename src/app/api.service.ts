@@ -14,4 +14,7 @@ export class ApiService {
 public getBlogs(){
     return this.httpClient.get<Blogs[]>(`${this.apiURL}`);
 }
+
+
+
 }

@@ -668,3 +668,11 @@ a {
     vertical-align: top;
     position: absolute;
 }
+
+.txt2 {
+    position: absolute;
+    top: 430px;
+    bottom: 0;
+    left: 620px;
+    right: 0;
+}

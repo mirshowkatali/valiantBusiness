@@ -180,7 +180,15 @@
             <span class="notification-counter">1</span>
         </li>
     </ul>
-
+    <div class="txt2">
+        <label>Filter by: </label>
+        <select (change)="filterBlogs($event.target.value)">
+    <option value="0">--All--</option>
+    <option *ngFor="let status of stats" value={{status}}>
+      {{status}}
+    </option>
+  </select>
+    </div>
 </body>
 
 </html>
